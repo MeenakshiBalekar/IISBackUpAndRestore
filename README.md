@@ -7,7 +7,9 @@ How to take IIS backup and restore via Command prompt
 - Navigate to location %windir%\system32\inetsrv\.
 - Execute following command to take an IIS back up :
 
-| appcmd.exe add backup <backupname> | 
+  
+ | appcmd.exe add backup <backupname>  |
+ |---|
 
 # ![Backup](https://github.com/MeenakshiBalekar/IISBackUpAndRestore/blob/main/Capture.PNG)
 
@@ -20,6 +22,6 @@ The backup will be stored at %windir%\system32\inetsrv\backup directory.
 - Execute following command to back up configuration:
 
 | appcmd.exe restore backup <backupname> | 
-  
+|---|  
   
 # ![Restore](https://github.com/MeenakshiBalekar/IISBackUpAndRestore/blob/main/CaptureRestore.PNG)
