@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+# IISBackUpAndRestore
+How to take IIS backup and restore via Command prompt 
 
-You can use the [editor on GitHub](https://github.com/MeenakshiBalekar/IISBackUpAndRestore/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## To take backup of IIS 7 or Higher:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- Open cmd.exe as Administrator.
+- Navigate to location %windir%\system32\inetsrv\.
+- Execute following command to take an IIS back up :
 
-### Markdown
+  
+ | appcmd.exe add backup <backupname>  |
+ |---|
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# ![Backup](https://github.com/MeenakshiBalekar/IISBackUpAndRestore/blob/main/Capture.PNG)
 
-```markdown
-Syntax highlighted code block
+The backup will be stored at %windir%\system32\inetsrv\backup directory.
 
-# Header 1
-## Header 2
-### Header 3
+## To restore backup up IIS 7 or Higher:
 
-- Bulleted
-- List
+- Open the folder %windir%\system32\inetsrv\backup directory.
 
-1. Numbered
-2. List
+- Execute following command to back up configuration:
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MeenakshiBalekar/IISBackUpAndRestore/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+| appcmd.exe restore backup <backupname> | 
+|---|  
+  
+# ![Restore](https://github.com/MeenakshiBalekar/IISBackUpAndRestore/blob/main/CaptureRestore.PNG)
